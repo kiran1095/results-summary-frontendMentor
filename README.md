@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here to view solution](https://github.com/kiran1095/product-preview-design)
-- Live Site URL: [Click here](https://kiran1095.github.io/product-preview-design/)
+- Solution URL: [Click here to view solution](https://github.com/kiran1095/results-summary-frontendMentor)
+- Live Site URL: [Click here](https://kiran1095.github.io/results-summary-frontendMentor/)
 
 ## My process
 
