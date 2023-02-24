@@ -1,0 +1,228 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+    --result-bg-clr1: hsla(0, 100%, 67%, 8%);
+    --result-bg-clr2: hsla(39, 100%, 56%, 8%);
+    --result-bg-clr3: hsla(166, 100%, 37%, 8%);
+    --result-bg-clr4: hsla(234, 85%, 45%, 8%);
+
+    --result-clr1: hsl(0, 100%, 67%);
+    --result-clr2: hsl(39, 100%, 56%);
+    --result-clr3: hsl(166, 100%, 37%);
+    --result-clr4: hsl(234, 85%, 45%);
+
+    --bg-main: hsl(252, 100%, 67%);
+    --bg-main2: hsl(241, 81%, 54%);
+    --btn-bg-hover: hsla(256, 72%, 46%, 1);
+    --btn-bg: hsla(241, 72%, 46%, 0.15);
+
+    --font-clr1: hsl(221, 100%, 96%);
+    --font-clr2: hsl(241, 100%, 89%);
+    --font-clr3: hsl(224, 30%, 27%);
+    --font-clr4: hsl(0, 0%, 100%);
+    --font-clr5: hsla(224, 30%, 27%, 0.5);
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 18px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 375px;
+    box-shadow: 10px 5px -7px rgb(48 59 90 / 55%);
+}
+
+.result_block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: linear-gradient(180deg, rgba(120,87,255,1) 35%, rgba(46,43,233,1));
+    text-align: center;
+    padding: 1rem 3.5rem;
+    border-radius: 0 0 2rem 2rem;
+    color: var(--font-clr4);
+}
+
+.result_title {
+  font-weight: 800;
+  color: var(--font-clr1);
+}
+
+.marks, .remarks {
+  font-weight: 500;
+  color: var(--font-clr2);
+}
+
+.span_marks {
+  font-weight: 500;
+  color: var(--font-clr5);
+}
+
+.final_result {
+    background: linear-gradient(180deg, rgba(78,33,202,1) 35%, rgba(36,33,202,0.54));
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.total_marks {
+  font-size: 2rem;
+}
+
+
+.summary_block {
+  background-color: var(--font-clr4);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.3rem; */
+}
+
+.summary_block>div{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 0.3rem;
+  margin: 10px 0px;
+}
+
+div>.logo-div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.reaction-div {
+  background-color: var(--result-bg-clr1);  
+}
+
+.memory-div {
+  background-color: var(--result-bg-clr2);
+}
+
+.verbal-div {
+  background-color: var(--result-bg-clr3);
+}
+
+.visual-div {
+  background-color: var(--result-bg-clr4);
+}
+
+button {
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  background-color: var(--font-clr3);
+  color: var(--font-clr4);
+  border: 0;
+  font-weight: 800;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--btn-bg-hover);
+}
+
+.score {
+  color: var(--font-clr3);
+  font-weight: 900;
+}
+
+.reaction_title {
+  color: var(--result-clr1);
+}
+
+.memory_title {
+  color: var(--result-clr2);
+}
+
+.verbal_title {
+  color: var(--result-clr3);
+}
+
+.visual_title {
+  color: var(--result-clr4);
+}
+
+@media (min-width: 750px) {
+  section {
+    flex-direction: row;
+    width: 700px;
+    flex-basis: 1;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 5px 7px rgb(48 59 90 / 55%);
+    border-radius: 2rem;
+  }
+
+  .result_block {
+    width: 350px;
+    border-radius: 2rem;
+    padding: 3.6rem;
+  }
+
+  .summary_block {
+    width: 350px;
+    border-radius: 2rem;
+  }
+
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
